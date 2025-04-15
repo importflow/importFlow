@@ -12,7 +12,7 @@ import {
   IconButton, Collapse, Button
 } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import {ExpandMore, ExpandLess, Add, PersonAdd} from '@mui/icons-material';
+import {ExpandMore, ExpandLess, Add} from '@mui/icons-material';
 
 function createData(supplier, amount, items, enrichedPercentage, status, date) {
   return {
@@ -112,7 +112,6 @@ const rows = [
 export const Invoices = () => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [open, setOpen] = React.useState(false);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);

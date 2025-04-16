@@ -438,9 +438,7 @@ const MainLayout = () => {
             <Outlet/>
           </Container>
         </DashboardLayout>
-        {/*<Header></Header>*/}
       </ReactRouterAppProvider>
-      {/*<Footer/>*/}
     </>
   );
 }

@@ -430,6 +430,17 @@ const MainLayout = () => {
             toolbarActions: Header,
             sidebarFooter: Footer,
           }}
+
+          sx={{
+            'a': {
+              'span': {
+                whiteSpace: 'nowrap',
+                textOverflow: 'ellipsis',
+                overflow: 'hidden',
+                paddingRight: '1rem'
+              },
+            },
+          }}
         >
           <Container
             maxWidth="xl"

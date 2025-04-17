@@ -18,8 +18,43 @@ import {
   SensorDoor,
   Terminal,
   CreditCard,
+  Storage as StorageIcon,
+  History as HistoryIcon,
   Description,
-  Settings
+  Settings,
+  Palette,
+  Policy,
+  Business,
+  NotificationsNone,
+  Subscriptions,
+  DataUsage,
+  RequestQuote,
+  TrendingUp,
+  Science,
+  BugReport,
+  ReportProblem,
+  Hub,
+  PictureAsPdf,
+  AltRoute,
+  Group,
+  Security,
+  PersonAdd,
+  VpnKey,
+  Http,
+  Speed,
+  Search,
+  AccountTree,
+  Insights,
+  Router as RouterIcon,
+  Extension,
+  People,
+  Schedule,
+  Brush,
+  AddCircleOutline,
+  Timeline,
+  CheckCircleOutline,
+  TrackChanges,
+  ErrorOutline, Inventory2, BarChart, ViewList, DashboardCustomize, Layers, FolderOpen
 } from '@mui/icons-material';
 import {Header} from "../components/Header.jsx";
 import {Footer} from "../components/Footer.jsx";
@@ -29,52 +64,52 @@ const NAVIGATION = [
     kind: 'header',
     title: 'WORKFLOWS',
   },
-  {
-    segment: '',
-    title: 'Dashboard',
-    icon: <Dashboard />,
-    children: [
-      {
-        segment: 'enrichment-activity',
-        title: 'Enrichment activity',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'top-suppliers',
-        title: 'Top suppliers',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'missing-data',
-        title: 'Missing data',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'system-health',
-        title: 'System health',
-        icon: <Autorenew />,
-      },
-    ]
-  },  
+  // {
+  //   segment: '',
+  //   title: 'Dashboard',
+  //   icon: <Dashboard />,
+  //   children: [
+  //     {
+  //       segment: 'enrichment-activity',
+  //       title: 'Enrichment activity',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'top-suppliers',
+  //       title: 'Top suppliers',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'missing-data',
+  //       title: 'Missing data',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'system-health',
+  //       title: 'System health',
+  //       icon: <Autorenew />,
+  //     },
+  //   ]
+  // },  
   {
     segment: '',
     title: 'Projects & use cases',
     icon: <WorkOutline />,
     children: [
       {
-        segment: 'all-projects',
-        title: 'All projects',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'by-industry',
-        title: 'By industry (construction, FMCG, etc.)',
-        icon: <Autorenew />,
+        segment: 'active-projects',
+        title: 'Active Projects',
+        icon: <FolderOpen />,
       },
       {
         segment: 'templates',
-        title: 'Templates / repeatable setups',
-        icon: <Autorenew />,
+        title: 'Templates',
+        icon: <Layers />,
+      },
+      {
+        segment: 'project-status',
+        title: 'Project Status',
+        icon: <DashboardCustomize />,
       }
     ]
   },  
@@ -84,35 +119,20 @@ const NAVIGATION = [
     icon: <ReceiptLong />,
     children: [
       {
-        segment: 'supplier',
-        title: 'Supplier',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'project',
-        title: 'Project',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'access-point-provider',
-        title: 'Access point provider',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'Invoices',
+        segment: 'invoices',
         title: 'Invoices',
-        icon: <Autorenew />,
-      },     
+        icon: <ReceiptLong />,
+      },
       {
-        segment: 'items',
-        title: 'Items (line-level)',
-        icon: <Autorenew />,
-      },  
+        segment: 'line-items',
+        title: 'Line Items',
+        icon: <ViewList />,
+      },
       {
         segment: 'enrichment-status',
-        title: 'Enrichment status',
-        icon: <Autorenew />,
-      },
+        title: 'Enrichment Status',
+        icon: <BarChart />,
+      }
     ]
   },  
   {
@@ -122,23 +142,23 @@ const NAVIGATION = [
     children: [
       {
         segment: 'supplier-list',
-        title: 'Supplier list',
-        icon: <Autorenew />,
+        title: 'Supplier List',
+        icon: <Store />,
       },
       {
-        segment: 'CO2-status',
-        title: 'CO₂ status',
-        icon: <Autorenew />,
+        segment: 'product-data',
+        title: 'Product Data',
+        icon: <Inventory2 />,
       },
       {
-        segment: 'product-registry',
-        title: 'Product registry',
-        icon: <Autorenew />,
+        segment: 'missing-data',
+        title: 'Missing Data',
+        icon: <ErrorOutline />,
       },
       {
-        segment: 'data-issues',
-        title: 'Data issues',
-        icon: <Autorenew />,
+        segment: 'epd-coverage',
+        title: 'EPD Coverage',
+        icon: <TrackChanges />,
       }
     ]
   },  
@@ -149,18 +169,23 @@ const NAVIGATION = [
     children: [
       {
         segment: 'active-enrichments',
-        title: 'Active enrichments',
-        icon: <Autorenew />,
+        title: 'Active Enrichments ',
+        icon: <CheckCircleOutline />,
       },
       {
         segment: 'data-source-history',
-        title: 'Data source history',
-        icon: <Autorenew />,
+        title: 'Data Sources',
+        icon: <StorageIcon />,
+      },
+      {
+        segment: 'source-history',
+        title: 'Source History',
+        icon: <Timeline />,
       },
       {
         segment: 'add-source',
-        title: 'Add source',
-        icon: <Autorenew />,
+        title: 'Add Source',
+        icon: <AddCircleOutline />,
       }
     ]
   },
@@ -172,22 +197,22 @@ const NAVIGATION = [
       {
         segment: 'clients',
         title: 'Clients',
-        icon: <Autorenew />,
+        icon: <People />,
       },
       {
         segment: 'commission',
         title: 'Commission',
-        icon: <Autorenew />,
+        icon: <AttachMoney />,
       },
       {
-        segment: 'whitelabeling',
-        title: 'Whitelabeling',
-        icon: <Autorenew />,
+        segment: 'sla-monitoring',
+        title: 'SLA Monitoring ',
+        icon: <Schedule />,
       },
       {
-        segment: 'SLA',
-        title: 'SLA/uptime',
-        icon: <Autorenew />,
+        segment: 'branding',
+        title: 'Branding',
+        icon: <Brush />,
       }
     ]
   },
@@ -204,27 +229,27 @@ const NAVIGATION = [
     icon: <IntegrationInstructions />,
     children: [
       {
-        segment: 'all-integrations',
-        title: 'All integrations',
-        icon: <Autorenew />,
+        segment: 'erp-systems',
+        title: 'ERP Systems',
+        icon: <AccountTree />,
       },
       {
-        segment: 'ERP',
-        title: 'ERP',
-        icon: <Autorenew />,
+        segment: 'analytics-esg',
+        title: 'Analytics / ESG',
+        icon: <Insights />,
       },
       {
-        segment: 'ESG',
-        title: 'ESG',
-        icon: <Autorenew />,
+        segment: 'webhook-destinations',
+        title: 'Webhook Destinations',
+        icon: <RouterIcon />,
       },
       {
-        segment: 'reporting',
-        title: 'reporting',
-        icon: <Autorenew />,
+        segment: 'custom-integrations',
+        title: 'Custom Integrations',
+        icon: <Extension />,
       }
     ]
-  }, 
+  },
   {
     segment: '',
     title: 'API & Access',
@@ -232,23 +257,23 @@ const NAVIGATION = [
     children: [
       {
         segment: 'api-keys',
-        title: 'API keys',
-        icon: <Autorenew />,
+        title: 'API Keys',
+        icon: <VpnKey />,
       },
       {
         segment: 'webhooks',
         title: 'Webhooks',
-        icon: <Autorenew />,
+        icon: <Http />,
       },
       {
         segment: 'rate-limits',
         title: 'Rate limits',
-        icon: <Autorenew />,
+        icon: <Speed />,
       },
       {
         segment: 'API-Explorer',
         title: 'API Explorer',
-        icon: <Autorenew />,
+        icon: <Search />,
       }
     ]
   },  
@@ -260,25 +285,26 @@ const NAVIGATION = [
       {
         segment: 'team',
         title: 'Team',
-        icon: <Autorenew />,
+        icon: <Group />,
       },
       {
         segment: 'Roles',
         title: 'Roles',
-        icon: <Autorenew />,
+        icon: <Security />,
       },
       {
         segment: 'Audit-logs',
         title: 'Audit logs',
-        icon: <Autorenew />,
+        icon: <HistoryIcon />,
       },
       {
         segment: 'Invite-user',
         title: 'Invite user',
-        icon: <Autorenew />,
+        icon: <PersonAdd />,
       }
     ]
   },
+  
   {
     segment: '',
     title: 'Access Points & Capture',
@@ -286,18 +312,18 @@ const NAVIGATION = [
     children: [
       {
         segment: 'Access-points',
-        title: 'Access points',
-        icon: <Autorenew />,
+        title: 'Access Point Providers',
+        icon: <Hub />,
       },
       {
-        segment: 'Capture-providers',
-        title: 'Capture providers',
-        icon: <Autorenew />,
+        segment: 'Capture-systems',
+        title: 'Capture Systems',
+        icon: <PictureAsPdf />,
       },
       {
         segment: 'Routing-logic',
-        title: 'Routing logic',
-        icon: <Autorenew />,
+        title: 'Routing Rules',
+        icon: <AltRoute />,
       }
     ]
   },
@@ -314,19 +340,24 @@ const NAVIGATION = [
     icon: <Terminal />,
     children: [
       {
-        segment: 'Logs',
-        title: 'Logs',
-        icon: <Autorenew />,
+        segment: 'sandbox',
+        title: 'Sandbox',
+        icon: <Science />,
       },
       {
-        segment: 'Sandbox-test',
-        title: 'Sandbox test',
-        icon: <Autorenew />,
+        segment: 'test-payload',
+        title: 'Test Payload',
+        icon: <BugReport />,
       },
       {
         segment: 'Error-simulator',
-        title: 'Error simulator',
-        icon: <Autorenew />,
+        title: 'Error Simulator',
+        icon: <ReportProblem />,
+      },
+      {
+        segment: 'cli-sdk',
+        title: 'CLI / SDK',
+        icon: <Terminal />,
       }
     ]
   },
@@ -337,53 +368,53 @@ const NAVIGATION = [
     children: [
       {
         segment: 'Plan',
-        title: 'Plan',
-        icon: <Autorenew />,
+        title: 'Plan Overview',
+        icon: <Subscriptions />,
       },
       {
         segment: 'Usage',
-        title: 'Usage',
-        icon: <Autorenew />,
+        title: 'Usage History',
+        icon: <DataUsage />,
       },
       {
         segment: 'Invoices',
         title: 'Invoices',
-        icon: <Autorenew />,
+        icon: <RequestQuote />,
       },
       {
         segment: 'Upgrade',
         title: 'Upgrade',
-        icon: <Autorenew />,
+        icon: <TrendingUp />,
       }
     ]
   },
-  {
-    segment: '',
-    title: 'Documentation',
-    icon: <Description />,
-    children: [
-      {
-        segment: 'Quickstart',
-        title: 'Quickstart',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'API',
-        title: 'API',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'SDKs',
-        title: 'SDKs',
-        icon: <Autorenew />,
-      },
-      {
-        segment: 'Use-cases',
-        title: 'Use cases',
-        icon: <Autorenew />,
-      }
-    ]
-  },
+  // {
+  //   segment: '',
+  //   title: 'Documentation',
+  //   icon: <Description />,
+  //   children: [
+  //     {
+  //       segment: 'Quickstart',
+  //       title: 'Quickstart',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'API',
+  //       title: 'API',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'SDKs',
+  //       title: 'SDKs',
+  //       icon: <Autorenew />,
+  //     },
+  //     {
+  //       segment: 'Use-cases',
+  //       title: 'Use cases',
+  //       icon: <Autorenew />,
+  //     }
+  //   ]
+  // },
   {
     segment: '',
     title: 'Settings',
@@ -392,27 +423,27 @@ const NAVIGATION = [
       {
         segment: 'General',
         title: 'General',
-        icon: <Autorenew />,
+        icon: <Settings />,
       },
       {
         segment: 'Notifications',
         title: 'Notifications',
-        icon: <Autorenew />,
+        icon: <NotificationsNone />,
       },
       {
         segment: 'Branding',
-        title: 'Branding',
-        icon: <Autorenew />,
+        title: 'Company Info',
+        icon: <Business />,
       },
       {
         segment: 'Legal',
-        title: 'Legal',
-        icon: <Autorenew />,
+        title: 'Compliance',
+        icon: <Policy />,
       },
       {
         segment: 'Advanced',
-        title: 'Advanced',
-        icon: <Autorenew />,
+        title: 'Brand & Theme',
+        icon: <Palette />,
       }
     ]
   },

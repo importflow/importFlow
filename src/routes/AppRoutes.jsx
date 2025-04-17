@@ -17,35 +17,38 @@ const AppRoutes = () => (
       <Route path={'/missing-data'} element={<Dashboard />} />
       <Route path={'/system-health'} element={<Dashboard />} />
      
-      <Route path={'/all-projects'} element={<Dashboard />} />
-      <Route path={'/by-industry'} element={<Dashboard />} />
+      <Route path={'/active-projects'} element={<Dashboard />} />
       <Route path={'/templates'} element={<Dashboard />} />
+      <Route path={'/project-status'} element={<Dashboard />} />
       
-      <Route path={'/supplier'} element={<Dashboard />} />
-      <Route path={'/project'} element={<Dashboard />} />
-      <Route path={'/access-point-provider'} element={<Dashboard />} />
+      <Route path={'/invoices'} element={<Dashboard />} />
+      <Route path={'/line-items'} element={<Dashboard />} />
+      <Route path={'/enrichment-status'} element={<Dashboard />} />
+      
       <Route path={'/Invoices'} element={<Dashboard />} />
       <Route path={'/items'} element={<Dashboard />} />
       <Route path={'/enrichment-status'} element={<Dashboard />} />
       
       <Route path={'/supplier-list'} element={<Dashboard />} />
-      <Route path={'/CO2-status'} element={<Dashboard />} />
-      <Route path={'/product-registry'} element={<Dashboard />} />
-      <Route path={'/data-issues'} element={<Dashboard />} />
+      <Route path={'/product-data'} element={<Dashboard />} />
+      <Route path={'/missing-data'} element={<Dashboard />} />
+      <Route path={'/epd-coverage'} element={<Dashboard />} />
       
       <Route path={'/active-enrichments'} element={<Dashboard />} />
       <Route path={'/data-source-history'} element={<Dashboard />} />
+      <Route path={'/source-history'} element={<Dashboard />} />
       <Route path={'/add-source'} element={<Dashboard />} />
       
       <Route path={'/clients'} element={<Dashboard />} />
       <Route path={'/commission'} element={<Dashboard />} />
-      <Route path={'/whitelabeling'} element={<Dashboard />} />
-      <Route path={'/SLA'} element={<Dashboard />} />
+      <Route path={'/sla-monitoring'} element={<Dashboard />} />
+      <Route path={'/branding'} element={<Dashboard />} />
       
-      <Route path={'/all-integrations'} element={<Dashboard />} />
-      <Route path={'/ERP'} element={<Dashboard />} />
-      <Route path={'/ESG'} element={<Dashboard />} />
-      <Route path={'/reporting'} element={<Dashboard />} />
+      <Route path={'/erp-systems'} element={<Dashboard />} />
+      <Route path={'/webhook-destinations'} element={<Dashboard />} />
+      <Route path={'/analytics-esg'} element={<Dashboard />} />
+      <Route path={'/custom-integrations'} element={<Dashboard />} />
+      
       
       <Route path={'/api-keys'} element={<Dashboard />} />
       <Route path={'/webhooks'} element={<Dashboard />} />
@@ -58,12 +61,13 @@ const AppRoutes = () => (
       <Route path={'/Invite-user'} element={<Dashboard />} />
       
       <Route path={'/Access-points'} element={<Dashboard />} />
-      <Route path={'/Capture-providers'} element={<Dashboard />} />
+      <Route path={'/Capture-systems'} element={<Dashboard />} />
       <Route path={'/Routing-logic'} element={<Dashboard />} />
       
-      <Route path={'/Logs'} element={<Dashboard />} />
-      <Route path={'/Sandbox-test'} element={<Dashboard />} />
+      <Route path={'/sandbox'} element={<Dashboard />} />
+      <Route path={'/test-payload'} element={<Dashboard />} />
       <Route path={'/Error-simulator'} element={<Dashboard />} />
+      <Route path={'/cli-sdk'} element={<Dashboard />} />
       
       <Route path={'/Plan'} element={<Dashboard />} />
       <Route path={'/Usage'} element={<Dashboard />} />

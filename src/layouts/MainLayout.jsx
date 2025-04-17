@@ -5,8 +5,21 @@ import { ReactRouterAppProvider } from '@toolpad/core/react-router';
 import {
   Autorenew,
   AttachMoney,
-  Folder,
-  Home
+  Home,
+  Dashboard,
+  WorkOutline,
+  ReceiptLong,
+  Store,
+  LibraryBooks,
+  BusinessCenter,
+  IntegrationInstructions,
+  Code,
+  ManageAccounts,
+  SensorDoor,
+  Terminal,
+  CreditCard,
+  Description,
+  Settings
 } from '@mui/icons-material';
 import {Header} from "../components/Header.jsx";
 import {Footer} from "../components/Footer.jsx";
@@ -19,7 +32,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Dashboard',
-    icon: <Folder />,
+    icon: <Dashboard />,
     children: [
       {
         segment: 'enrichment-activity',
@@ -46,7 +59,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Projects & use cases',
-    icon: <Folder />,
+    icon: <WorkOutline />,
     children: [
       {
         segment: 'all-projects',
@@ -68,7 +81,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Invoices & transactions',
-    icon: <Folder />,
+    icon: <ReceiptLong />,
     children: [
       {
         segment: 'supplier',
@@ -105,7 +118,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Suppliers',
-    icon: <Folder />,
+    icon: <Store />,
     children: [
       {
         segment: 'supplier-list',
@@ -132,7 +145,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Enrichment registry',
-    icon: <Folder />,
+    icon: <LibraryBooks />,
     children: [
       {
         segment: 'active-enrichments',
@@ -154,7 +167,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Reseller portal',
-    icon: <Folder />,
+    icon: <BusinessCenter />,
     children: [
       {
         segment: 'clients',
@@ -188,7 +201,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Integrations',
-    icon: <Folder />,
+    icon: <IntegrationInstructions />,
     children: [
       {
         segment: 'all-integrations',
@@ -215,7 +228,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'API & Access',
-    icon: <Folder />,
+    icon: <Code />,
     children: [
       {
         segment: 'api-keys',
@@ -242,7 +255,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Users & Roles',
-    icon: <Folder />,
+    icon: <ManageAccounts />,
     children: [
       {
         segment: 'team',
@@ -269,7 +282,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Access Points & Capture',
-    icon: <Folder />,
+    icon: <SensorDoor />,
     children: [
       {
         segment: 'Access-points',
@@ -298,7 +311,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Developer tools',
-    icon: <Folder />,
+    icon: <Terminal />,
     children: [
       {
         segment: 'Logs',
@@ -320,7 +333,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Billing & Usage',
-    icon: <Folder />,
+    icon: <CreditCard />,
     children: [
       {
         segment: 'Plan',
@@ -347,7 +360,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Documentation',
-    icon: <Folder />,
+    icon: <Description />,
     children: [
       {
         segment: 'Quickstart',
@@ -374,7 +387,7 @@ const NAVIGATION = [
   {
     segment: '',
     title: 'Settings',
-    icon: <Folder />,
+    icon: <Settings />,
     children: [
       {
         segment: 'General',
